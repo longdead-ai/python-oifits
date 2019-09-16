@@ -13,6 +13,8 @@ authors:
   - name: Arnav Bhavsar
     orcid: 0000-0003-2849-4375
     affiliation: 1
+  - name: Ananya Shukla
+    affiliation: 1
 affiliations:
  - name: School of Computing and Electrical Engineering, Indian Institute of Technology Mandi
    index: 1
@@ -40,10 +42,7 @@ The problem of understanding the open data that is provided by Event Horizon Tel
 ``oifits`` is designed to be used by both researchers working on Optical Interferometry
 and by researchers working on Event Horizon Telescope Data.
 
-A research project is being worked upon by Shreyas Bapat[1] to reconstruct
-the VLBI Images which is highly dependent on this module.
-
-# Processing EHT Data using ``oifits``
+An example of how easy ``oifits`` make it to read the files is :
 
 ```python
 from oifits.read import OIParser
@@ -52,9 +51,6 @@ a = OIParser.read("test.oifits")
 
 t3data = a.export_to_ascii()
 ```
-
-	
-
 
 # Acknowledgements
 
