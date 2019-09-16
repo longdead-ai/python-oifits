@@ -1,7 +1,6 @@
 import numpy as np
 
-from oifits.utils import *
-from oifits.utils import _angpoint
+from oifits.utils import _angpoint, _array_eq, _plurals
 
 
 def test_plural():

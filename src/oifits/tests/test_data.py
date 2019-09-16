@@ -6,11 +6,10 @@ from oifits.read import OIParser
 
 def test_data_initiates():
     a = Data()
-    assert a.wavelength == {}
-    assert a.target == np.empty(0)
-    assert a.vis == np.empty(0)
-    assert a.vis2 == np.empty(0)
-    assert a.t3 == np.empty(0)
+    assert a.target.size == 0
+    assert a.vis.size == 0
+    assert a.vis2.size == 0
+    assert a.t3.size == 0
 
 
 def test_eq_data_works_fine():
