@@ -58,9 +58,9 @@ class _angpoint(float):
         seconds = (angle - degrees - minutes / 60.0) * 3600.0
         try:
             if negative:
-                return "-%02d:%02d:%05.2f" % (degrees, minutes, seconds)
+                return degrees, minutes, seconds
             else:
-                return "+%02d:%02d:%05.2f" % (degrees, minutes, seconds)
+                return degrees, minutes, seconds
         except TypeError:
             return self.__repr__()
 
@@ -73,6 +73,6 @@ class _angpoint(float):
         minutes = np.floor((angle - hours) * 60.0)
         seconds = (angle - hours - minutes / 60.0) * 3600.0
         try:
-            return "%02d:%02d:%05.2f" % (hours, minutes, seconds)
+            return hours, minutes, seconds
         except TypeError:
             return self.__repr__()

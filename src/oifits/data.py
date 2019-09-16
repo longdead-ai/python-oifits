@@ -78,7 +78,7 @@ class Data:
         if len(other.array):
             stationmap = {}
             arraymap = {}
-            for key, otharray in other.array.iteritems():
+            for key, otharray in other.array.items():
                 arraymap[id(otharray)] = key
                 if key not in new.array.keys():
                     new.array[key] = copy.deepcopy(other.array[key])
@@ -505,17 +505,12 @@ class Data:
 
         hdulist = fits.HDUList()
         hdu = fits.PrimaryHDU()
-        hdu.header.update(
-            "DATE",
-            datetime.datetime.now().strftime(format="%F"),
-            comment="Creation date",
-        )
-        hdu.header.add_comment("Written by oifits version 0.1.0")
-        hdu.header.add_comment("http://www.mpia-hd.mpg.de/homes/boley/oifits/")
+        hdu.header.add_comment("Written by oifits version 0.2.0")
+        hdu.header.add_comment("http://oifits.vlbi.software/")
 
         wavelengthmap = {}
         hdulist.append(hdu)
-        for insname, wavelength in self.wavelength.iteritems():
+        for insname, wavelength in self.wavelength.items():
             wavelengthmap[id(wavelength)] = insname
             hdu = fits.new_table(
                 fits.ColDefs(
@@ -638,7 +633,7 @@ class Data:
 
         arraymap = {}
         stationmap = {}
-        for arrname, array in self.array.iteritems():
+        for arrname, array in self.array.items():
             arraymap[id(array)] = arrname
             tel_name = []
             sta_name = []
