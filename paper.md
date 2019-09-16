@@ -30,9 +30,10 @@ The problem of understanding the open data that is provided by Event Horizon Tel
 # Summary
 
 ``oifits`` is a Python package for reading and analysing OIFITS Data. One can easily procure the interferometry data from the OIFITS file and store it in a numpy array for further analysis. There are specialised classes for storing the interferometry data some of which are mentioned below:
-    * Class to store visibility amplitude and differential phase data.
-    * Class to store squared visibility amplitude data
-    * Class to store triple product and closure phase data.
+
+* Class to store visibility amplitude and differential phase data.
+* Class to store squared visibility amplitude data
+* Class to store triple product and closure phase data.
 
 And many more such classes. These classes hold all the details of the experiment and no data is lost.
 
