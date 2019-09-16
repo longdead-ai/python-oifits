@@ -1,3 +1,5 @@
+import numpy as np
+
 from oifits.data import Data
 from oifits.read import OIParser
 
